@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/common_dialog_text_margin_left"
+    android:paddingEnd="@dimen/common_dialog_text_margin_left"
+    android:paddingBottom="6dp"
+    >
+
+    <CheckBox
+        android:id="@+id/cb_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox_style2"
+        android:checked="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_huobi"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintStart_toEndOf="@id/cb_rv"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:text="火币" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintStart_toEndOf="@id/iv_name"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:text="火币" />
+
+    <TextView
+        android:id="@+id/tv_exp_api"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="已添加策略"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_click_api"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="设置API"
+        android:textColor="@color/text_245"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

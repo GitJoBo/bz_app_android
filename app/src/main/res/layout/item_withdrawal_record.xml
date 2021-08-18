@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_white_r6666"
+    android:paddingStart="16dp"
+    android:paddingBottom="18dp">
+
+    <TextView
+        android:id="@+id/tv_states"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_mention_money_audit_failed"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="15dp"
+        android:text="审核不通过"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="类型："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_type_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/tv_type"
+        app:layout_constraintTop_toTopOf="@id/tv_type"
+        tools:text="兑换" />
+
+    <TextView
+        android:id="@+id/tv_chain_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="链类型："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+    <TextView
+        android:id="@+id/tv_chain_type_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRC"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/tv_type_value"
+        app:layout_constraintTop_toTopOf="@id/tv_chain_type" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="数量："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_chain_type" />
+
+    <TextView
+        android:id="@+id/tv_num_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 U"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/tv_type_value"
+        app:layout_constraintTop_toTopOf="@id/tv_num" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="时间："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_num" />
+
+    <TextView
+        android:id="@+id/tv_end_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/tv_type_value"
+        app:layout_constraintTop_toTopOf="@id/tv_time"
+        tools:text="2021-06-18 12:21:31" />
+
+    <TextView
+        android:id="@+id/tv_handling_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="手续费："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_handling_fee_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 U"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/tv_type_value"
+        app:layout_constraintTop_toTopOf="@id/tv_handling_fee" />
+
+    <TextView
+        android:id="@+id/tv_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="兑换地址："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_handling_fee" />
+
+    <TextView
+        android:id="@+id/tv_source_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:maxLines="2"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_type_value"
+        app:layout_constraintTop_toTopOf="@id/tv_source"
+        tools:text="2u7vc9sdM212233" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="拒绝原因："
+        android:textColor="@color/color_999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_source_value" />
+
+    <TextView
+        android:id="@+id/tv_reason_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F09E4B"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/tv_type_value"
+        app:layout_constraintTop_toTopOf="@id/tv_reason"
+        tools:text="账号存在风险，暂不支持兑换" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

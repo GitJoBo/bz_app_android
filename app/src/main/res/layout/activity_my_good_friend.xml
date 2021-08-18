@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/nested_scrollview">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="415dp"
+                android:background="@drawable/shape_c2b5_fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_title"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ToolBarStyle_black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@mipmap/icon_fh_black_white">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    tools:text="Title" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/tv_total_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="118dp"
+                android:text="总奖励（USDT）"
+                android:textColor="@color/text_eae"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_total_reward_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="0"
+                android:textColor="#ffffffff"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_total_reward"
+                app:layout_constraintStart_toStartOf="@id/tv_total_reward"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_reward" />
+
+            <TextView
+                android:id="@+id/tv_yesterday_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="20dp"
+                android:text="昨日收益(USDT)"
+                android:textColor="@color/text_eae"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_reward_value" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_yesterday_income" />
+
+            <TextView
+                android:id="@+id/tv_accumulative_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:text="累计收益(USDT)"
+                android:textColor="@color/text_eae"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_yesterday_income" />
+
+            <TextView
+                android:id="@+id/tv_yesterday_income_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_yesterday_income"
+                app:layout_constraintStart_toStartOf="@id/tv_yesterday_income"
+                app:layout_constraintTop_toBottomOf="@id/tv_yesterday_income" />
+
+            <TextView
+                android:id="@+id/tv_accumulative_income_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_accumulative_income"
+                app:layout_constraintStart_toStartOf="@id/tv_accumulative_income"
+                app:layout_constraintTop_toBottomOf="@id/tv_accumulative_income" />
+
+            <ImageView
+                android:id="@+id/iv_bg_1"
+                android:layout_width="0dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_my_team"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_yesterday_income_value" />
+
+            <TextView
+                android:id="@+id/tv_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="82dp"
+                android:text="划转"
+                android:textColor="@color/text_black"
+                android:textSize="12dp"
+                android:drawableTop="@mipmap/ic_transfer"
+                app:layout_constraintBottom_toBottomOf="@id/iv_bg_1"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_1"
+                app:layout_constraintTop_toTopOf="@id/iv_bg_1" />
+
+            <TextView
+                android:id="@+id/tv_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="82dp"
+                android:text="兑换"
+                android:textColor="@color/text_black"
+                android:textSize="12dp"
+                android:drawableTop="@mipmap/ic_withdraw"
+                app:layout_constraintBottom_toBottomOf="@id/iv_bg_1"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg_1"
+                app:layout_constraintTop_toTopOf="@id/iv_bg_1" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_bg_1" />
+
+            <ImageView
+                android:id="@+id/iv_bg_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/bg_invite_friends"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view_1" />
+
+            <TextView
+                android:id="@+id/tv_me_recommended_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="我推荐的人"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_2"
+                app:layout_constraintTop_toBottomOf="@id/iv_bg_2" />
+
+            <TextView
+                android:id="@+id/tv_me_recommended_person_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0人"
+                android:textColor="@color/text_245"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg_2"
+                app:layout_constraintTop_toTopOf="@id/tv_me_recommended_person" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_me_recommended_person"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layout_constraintTop_toBottomOf="@id/tv_me_recommended_person" />
+
+            <TextView
+                android:id="@+id/tv_recommended_me_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="推荐我的人"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_2"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_me_recommended_person" />
+
+            <include
+                android:id="@+id/include_recommended_me_person"
+                layout="@layout/item_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_recommended_me_person" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <!--    </LinearLayout>-->
+
+
+</layout>

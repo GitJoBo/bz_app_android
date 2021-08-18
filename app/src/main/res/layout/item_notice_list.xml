@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/sl_bg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/shadow_layout_12dp_width351"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/shadow_layout_12dp_width351"
+        app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="@dimen/shadow_layout_limit"
+        app:hl_shadowOffsetY="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="98dp"
+            android:background="@drawable/select_white_f4f" />
+    </com.lihang.ShadowLayout>
+
+    <TextView
+        android:id="@+id/tv_notice_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="盛洋科技前九月扣非净利仅156万盛洋科科…"
+        android:textColor="#ff333333"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/sl_bg"
+        app:layout_constraintStart_toStartOf="@id/sl_bg"
+        app:layout_constraintTop_toTopOf="@id/sl_bg" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_ddd"
+        app:layout_constraintEnd_toEndOf="@id/tv_notice_title"
+        app:layout_constraintStart_toStartOf="@id/tv_notice_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_notice_title" />
+
+    <TextView
+        android:id="@+id/tv_notice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="2020/12/09 12:22"
+        android:textColor="#ff999999"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/tv_notice_title"
+        app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+    <TextView
+        android:id="@+id/tv_notice_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/ic_notice_right"
+        android:text="查看更多"
+        android:textColor="#ff999999"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_notice_title"
+        app:layout_constraintTop_toTopOf="@id/tv_notice_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

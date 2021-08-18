@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/title_status_bar"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        tools:text="Title" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/eee" />
+
+</LinearLayout>

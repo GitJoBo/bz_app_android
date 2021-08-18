@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shape_ce6e_r6600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_bg_1"
+            android:layout_width="0dp"
+            android:layout_height="318dp"
+            android:background="@drawable/shape_white_r0066"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/iv_bg" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="提示：余额兑换后，不可划回"
+            android:textColor="@color/text_245"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_bg" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="兑换金额"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_tips"
+            app:layout_constraintTop_toTopOf="@id/iv_bg_1" />
+
+        <com.bizeng.lh.widget.view.ClearWriteEditText
+            android:id="@+id/cwet_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="输入数量"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textColorHint="@color/ccc"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_usdt"
+            app:layout_constraintStart_toStartOf="@id/tv_num"
+            app:layout_constraintTop_toBottomOf="@id/tv_num" />
+
+        <TextView
+            android:id="@+id/tv_usdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="USDT"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/cwet_num"
+            app:layout_constraintEnd_toStartOf="@id/view_3"
+            app:layout_constraintTop_toTopOf="@id/cwet_num" />
+
+        <View
+            android:id="@+id/view_3"
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/eee"
+            app:layout_constraintBottom_toBottomOf="@id/tv_all"
+            app:layout_constraintEnd_toStartOf="@id/tv_all"
+            app:layout_constraintTop_toTopOf="@id/tv_all" />
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="全部"
+            android:textColor="@color/text_245"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/cwet_num"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg_1"
+            app:layout_constraintTop_toTopOf="@id/cwet_num" />
+
+        <View
+            android:id="@+id/view_4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/eee"
+            app:layout_constraintEnd_toEndOf="@id/tv_all"
+            app:layout_constraintStart_toStartOf="@id/tv_tips"
+            app:layout_constraintTop_toBottomOf="@id/cwet_num" />
+
+        <TextView
+            android:id="@+id/tv_over"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginTop="10dp"
+            android:text="可用8.121634 USDT"
+            android:textColor="@color/color_999"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@id/cwet_num"
+            app:layout_constraintTop_toBottomOf="@+id/view_4" />
+
+        <TextView
+            android:id="@+id/tv_estimated_handling_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="兑换的点数"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_tips"
+            app:layout_constraintTop_toBottomOf="@id/tv_over" />
+
+        <TextView
+            android:id="@+id/tv_handling_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="0.00"
+            android:textColor="@color/ccc"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_tips"
+            app:layout_constraintTop_toBottomOf="@id/tv_estimated_handling_fee" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="点"
+            android:textColor="@color/text_black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_all"
+            app:layout_constraintTop_toBottomOf="@id/tv_estimated_handling_fee" />
+
+        <View
+            android:id="@+id/view_5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/eee"
+            app:layout_constraintEnd_toEndOf="@id/tv_all"
+            app:layout_constraintStart_toStartOf="@id/tv_tips"
+            app:layout_constraintTop_toBottomOf="@id/tv_handling_fee" />
+
+        <TextView
+            android:id="@+id/tv_add_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="含赠送点数  0.00点"
+            android:textColor="#fff09e4b"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@id/tv_tips"
+            app:layout_constraintTop_toBottomOf="@id/view_5" />
+
+        <TextView
+            android:id="@+id/tv_add_point2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="加赠点数  0.00点"
+            android:textColor="#fff09e4b"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@id/tv_add_point"
+            app:layout_constraintTop_toBottomOf="@id/view_5" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_c245_r6"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@id/view_5"
+            app:layout_constraintStart_toStartOf="@id/view_5"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_point" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

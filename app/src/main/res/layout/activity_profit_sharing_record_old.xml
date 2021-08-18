@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/dsl_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tab_border_radius_size="5dp"
+            app:tab_border_solid_color="@color/white"
+            app:tab_border_stroke_color="@color/text_245"
+            app:tab_deselect_color="@color/text_245"
+            app:tab_draw_border="true"
+            app:tab_draw_divider="true"
+            app:tab_divider_solid_color="@color/text_245"
+            app:tab_indicator_style="STYLE_NONE"
+            app:tab_item_is_equ_width="true"
+            app:tab_select_color="@color/white"
+            tools:tab_default_index="1"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dsl_tab_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

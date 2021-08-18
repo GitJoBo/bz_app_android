@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_f5f">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="237dp"
+                android:background="@color/text_245"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_title"
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ToolBarStyle_black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@mipmap/icon_fh_black_white">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    tools:text="Title" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/tv_cumulative_advance_receipt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:text="0.00 U"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_cumulative_advance_receipt"
+                app:layout_constraintStart_toStartOf="@id/tv_cumulative_advance_receipt"
+                app:layout_constraintTop_toBottomOf="@id/main_bar" />
+
+            <TextView
+                android:id="@+id/tv_cumulative_advance_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="12dp"
+                android:text="累计预估"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_cumulative_advance_receipt_value" />
+
+            <ImageView
+                android:id="@+id/iv_centered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_my_earning_line"
+                app:layout_constraintBottom_toBottomOf="@id/tv_cumulative_advance_receipt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_cumulative_advance_receipt_value" />
+
+            <TextView
+                android:id="@+id/tv_accumulative_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:text="0.00 U"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_accumulative"
+                app:layout_constraintStart_toStartOf="@id/tv_accumulative"
+                app:layout_constraintTop_toBottomOf="@id/main_bar" />
+
+            <TextView
+                android:id="@+id/tv_accumulative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="70dp"
+                android:text="累计到账"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_accumulative_value" />
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/sl_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="118dp"
+                android:layout_marginEnd="4dp"
+                app:hl_cornerRadius="8dp"
+                app:hl_shadowColor="@color/shadow_color"
+                app:hl_shadowLimit="8dp"
+                app:hl_shadowOffsetY="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_bar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:background="@drawable/shape_white_r8"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_profit_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="17"
+                        android:maxLines="1"
+                        android:text="当前余额：0.00 U"
+                        android:textColor="@color/text_black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_redeem_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_c245_r6"
+                        android:paddingStart="14dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="7dp"
+                        android:text="兑换点卡"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/shape_stroke_ceee_r6"
+                        android:paddingStart="14dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="7dp"
+                        android:text="提币"
+                        android:textColor="#ff333333"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <ImageView
+                android:id="@+id/iv_siv_bg"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/selector_mine_setting_item_cfff_r6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sl_bg" />
+
+            <com.bizeng.lh.widget.view.SettingItemView
+                android:id="@+id/siv_profit_sharing_record"
+                style="@style/mine_setting_item_view"
+                android:layout_marginTop="0dp"
+                app:item_content="返利记录"
+                app:item_content_text_color="@color/text_black"
+                app:item_content_text_padding_start="14dp"
+                app:item_content_text_size="16dp"
+                app:item_divider="true"
+                app:item_right_image="@mipmap/ic_mine_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_siv_bg" />
+
+            <com.bizeng.lh.widget.view.SettingItemView
+                android:id="@+id/siv_mention_money_record"
+                style="@style/mine_setting_item_view"
+                android:layout_marginTop="0dp"
+                app:item_content="提币记录"
+                app:item_content_text_color="@color/text_black"
+                app:item_content_text_padding_start="14dp"
+                app:item_content_text_size="16dp"
+                app:item_divider="true"
+                app:item_right_image="@mipmap/ic_mine_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/siv_profit_sharing_record" />
+
+            <com.bizeng.lh.widget.view.SettingItemView
+                android:id="@+id/siv_my_team"
+                style="@style/mine_setting_item_view"
+                android:layout_marginTop="0dp"
+                app:item_content="我的好友"
+                app:item_content_text_color="@color/text_black"
+                app:item_content_text_padding_start="14dp"
+                app:item_content_text_size="16dp"
+                app:item_right_image="@mipmap/ic_mine_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/siv_mention_money_record" />
+
+            <com.bizeng.lh.widget.view.SettingItemView
+                android:id="@+id/siv_recommended_me"
+                style="@style/mine_setting_item_view"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_mine_setting_item_cfff_r6"
+                app:item_content="推荐我的人"
+                app:item_content_text_color="@color/text_black"
+                app:item_content_text_padding_start="14dp"
+                app:item_content_text_size="16dp"
+                app:item_divider="false"
+                app:item_right_image="@mipmap/ic_mine_right"
+                app:item_value="去设置"
+                app:item_value_text_color="@color/color_999"
+                app:item_value_text_size="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/siv_my_team" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</layout>

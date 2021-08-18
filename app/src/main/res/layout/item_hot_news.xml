@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:background="@drawable/select_white_f4f"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tv_popular_inquiries_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="14dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textStyle="bold"
+        tools:text="策略标识 HOT:后台人工设置  NEW:创建时间最近的三条数据显示NEW点击跳转P2-1.策略详情"
+        android:textColor="@color/text_2121"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_popular_inquiries_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxWidth="220dp"
+        android:maxLines="2"
+        tools:text="策略标识 HOT:后台人工设置  NEW:创建时间最近的三条数据显示NEW点击跳转P2-1.策略详情"
+        android:textSize="14dp"
+        android:textColor="@color/color_666"
+        app:layout_constraintEnd_toEndOf="@id/tv_popular_inquiries_title"
+        app:layout_constraintStart_toStartOf="@id/tv_popular_inquiries_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_popular_inquiries_title" />
+
+    <TextView
+        android:id="@+id/tv_popular_inquiries_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="9dp"
+        tools:text="2021-4-29 09:40:59"
+        android:textColor="@color/color_999"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/tv_popular_inquiries_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_popular_inquiries_content" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/eee"
+        app:layout_constraintStart_toStartOf="@id/tv_popular_inquiries_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_popular_inquiries_time"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

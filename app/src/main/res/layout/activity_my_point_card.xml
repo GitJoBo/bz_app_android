@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_bg"
+            style="@style/shadow_layout"
+            app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="@dimen/shadow_layout_limit"
+            app:hl_shadowOffsetY="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="351dp"
+                android:layout_height="90dp"
+                android:background="@drawable/shape_white_r5" />
+        </com.lihang.ShadowLayout>
+
+        <TextView
+            android:id="@+id/tv_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="15dp"
+            android:text="余额"
+            android:textColor="#ff666666"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@id/sl_bg"
+            app:layout_constraintTop_toTopOf="@+id/sl_bg" />
+
+        <TextView
+            android:id="@+id/tv_point_card_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/text_black"
+            android:textSize="36dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/tv_over"
+            app:layout_constraintTop_toBottomOf="@id/tv_over" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text=" 点"
+            android:textColor="@color/text_black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_point_card_value"
+            app:layout_constraintStart_toEndOf="@id/tv_point_card_value" />
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:drawableRight="@mipmap/ic_right_c315"
+            android:padding="10dp"
+            android:text="兑点"
+            android:textColor="#ff325bbb"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_point_card_value"
+            app:layout_constraintEnd_toEndOf="@id/sl_bg"
+            app:layout_constraintTop_toTopOf="@id/tv_point_card_value" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_point_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:overScrollMode="never"
+            app:layout_constraintStart_toStartOf="@id/sl_bg"
+            app:layout_constraintTop_toBottomOf="@id/sl_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_white_r5"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_point_card">
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="18dp"-->
+            <!--                android:layout_marginTop="12dp"-->
+            <!--                android:text="充币明细"-->
+            <!--                android:textColor="@color/color_666"-->
+            <!--                android:textSize="16dp" />-->
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginTop="12dp"-->
+            <!--                android:background="@color/eee" />-->
+
+            <!--            <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+            <!--                android:id="@+id/smart_refresh"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_marginTop="16dp">-->
+
+            <!--                <androidx.recyclerview.widget.RecyclerView-->
+            <!--                    android:id="@+id/recycler_view_point_card_value"-->
+            <!--                    android:overScrollMode="never"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent" />-->
+            <!--            </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+            <!--            <FrameLayout-->
+            <!--                android:id="@+id/frameLayout"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"/>-->
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F7F9"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:id="@+id/iv_api_title_hb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/bg_huobi_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_api_hb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_r5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_title"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_huobi"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="火币API"
+                android:textColor="@color/text_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_api_states_hb"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_title"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:text="去添加"
+                android:textColor="@color/text_245"
+                app:drawableRightCompat="@mipmap/ic_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_api_title_ba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/bg_bian_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_api_ba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_r5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_title"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_bian"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="币安API"
+                android:textColor="@color/text_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_api_states_ba"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_title"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:text="去添加"
+                android:textColor="@color/text_245"
+                app:drawableRightCompat="@mipmap/ic_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_api_title_okex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/bg_okex_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_api_okex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_r5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_title"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_okex"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="OKExAPI"
+                android:textColor="@color/text_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_api_states_okex"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_title"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:text="去添加"
+                android:textColor="@color/text_245"
+                app:drawableRightCompat="@mipmap/ic_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

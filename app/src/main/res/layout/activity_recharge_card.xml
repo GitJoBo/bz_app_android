@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/nested_scrollview"
+        android:background="@color/color_f5f">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_deposit_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:background="@mipmap/bg_deposit_guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/shape_ce6e_r6600"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_deposit_guide" />
+
+            <ImageView
+                android:id="@+id/iv_bg_1"
+                android:layout_width="0dp"
+                android:layout_height="116dp"
+                android:background="@drawable/shape_white_r0066"
+                app:layout_constraintEnd_toEndOf="@id/view_1"
+                app:layout_constraintStart_toStartOf="@id/view_1"
+                app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+            <TextView
+                android:id="@+id/tv_bz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="币种"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_1"
+                app:layout_constraintStart_toStartOf="@id/view_1"
+                app:layout_constraintTop_toTopOf="@id/view_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（1 USDT = 1 点）"
+                android:textColor="@color/color_999"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/view_1"
+                app:layout_constraintStart_toEndOf="@id/tv_bz"
+                app:layout_constraintTop_toTopOf="@id/view_1" />
+
+            <TextView
+                android:id="@+id/tv_usdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="USDT"
+                android:textColor="@color/text_245"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_1"
+                app:layout_constraintEnd_toEndOf="@id/view_1"
+                app:layout_constraintTop_toTopOf="@id/view_1" />
+
+            <TextView
+                android:id="@+id/tv_link_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="链接名"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@id/tv_bz"
+                app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:id="@+id/rv_link_name"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/tv_usdt"-->
+            <!--                app:layout_constraintStart_toStartOf="@id/tv_link_name"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/tv_link_name" />-->
+            <RadioGroup
+                android:id="@+id/rg_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/tv_usdt"
+                app:layout_constraintStart_toStartOf="@id/tv_link_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_link_name">
+
+                <RadioButton
+                    android:id="@+id/rb_trc20"
+                    style="@style/CustomRadioTheme"
+                    android:layout_width="154dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_radio"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="TRC20"
+                    android:textColor="@drawable/selector_text_core_white_c333"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/rb_erc20"
+                    style="@style/CustomRadioTheme"
+                    android:layout_width="154dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_radio"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="ERC20"
+                    android:textColor="@drawable/selector_text_core_white_c333"
+                    android:textSize="16dp" />
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:paddingBottom="17dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/shape_white_r6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_bg_1" />
+
+            <ImageView
+                android:id="@+id/iv_qr"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="22dp"
+                app:layout_constraintEnd_toEndOf="@id/view_2"
+                app:layout_constraintStart_toStartOf="@id/view_2"
+                app:layout_constraintTop_toTopOf="@id/view_2" />
+
+            <TextView
+                android:id="@+id/tv_save_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/shape_cf2f_r2"
+                android:paddingStart="14dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="6dp"
+                android:text="保存二维码至相册"
+                android:textColor="@color/text_245"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_qr"
+                app:layout_constraintStart_toStartOf="@id/iv_qr"
+                app:layout_constraintTop_toBottomOf="@id/iv_qr" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="充币地址"
+                android:textColor="@color/color_999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_qr"
+                app:layout_constraintStart_toStartOf="@id/iv_qr"
+                app:layout_constraintTop_toBottomOf="@id/tv_save_qr" />
+
+            <TextView
+                android:id="@+id/tv_address_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/text_black"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_qr"
+                app:layout_constraintStart_toStartOf="@id/iv_qr"
+                app:layout_constraintTop_toBottomOf="@id/tv_address"
+                tools:text="ahshdab23hn4jb231jb23jn4j1ahshdab23hn4jb231jb23jn4j1" />
+
+            <TextView
+                android:id="@+id/tv_copy_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_cf2f_r2"
+                android:paddingStart="14dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="6dp"
+                android:text="复制地址"
+                android:textColor="@color/text_245"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_qr"
+                app:layout_constraintStart_toStartOf="@id/iv_qr"
+                app:layout_constraintTop_toBottomOf="@id/tv_address_value" />
+
+            <Button
+                android:id="@+id/btn_show_tip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/login_btn_selector"
+                android:clickable="false"
+                android:text="我已完成兑换支付"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_register_btn_code_text_size"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg_1"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_copy_address" />
+
+            <TextView
+                android:id="@+id/tv_explanation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/shape_cf1f8_r6"
+                android:padding="16dp"
+                android:layout_marginBottom="17dp"
+                android:textColor="#ff5a6272"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg_1"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_1"
+                app:layout_constraintTop_toBottomOf="@id/btn_show_tip"
+                app:layout_constraintBottom_toBottomOf="@id/view_2"
+                tools:text="" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

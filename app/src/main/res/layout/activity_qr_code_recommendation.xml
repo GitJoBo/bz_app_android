@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_245"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_title"
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolBarStyle_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@mipmap/icon_fh_black_white">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                tools:text="Title" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_screenshot"
+            android:layout_width="375dp"
+            android:layout_height="603dp"
+            android:layout_marginBottom="72dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_bar">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_qr_code_recommendation"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_invitation_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="33dp"
+                android:text="邀请码:"
+                android:textColor="#ffb9bf24"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toTopOf="@id/iv_qr"
+                app:layout_constraintEnd_toEndOf="@id/iv_qr"
+                app:layout_constraintStart_toStartOf="@id/iv_qr" />
+
+            <ImageView
+                android:id="@+id/iv_qr_bg"
+                android:layout_width="139dp"
+                android:layout_height="139dp"
+                android:layout_marginTop="249dp"
+                android:background="@drawable/shape_white_r5"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg"
+                app:layout_constraintStart_toStartOf="@id/iv_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_bg" />
+
+            <ImageView
+                android:id="@+id/iv_qr"
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/iv_qr_bg"
+                app:layout_constraintEnd_toEndOf="@id/iv_qr_bg"
+                app:layout_constraintStart_toStartOf="@id/iv_qr_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_qr_bg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@mipmap/bg_bottom_invitation"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_copy_invitation_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:drawableTop="@mipmap/ic_copy_invitation_code"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:text="文字邀请"
+                android:textColor="@color/color_666"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_download_poster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_copy_invitation_code"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:text="下载海报"
+                android:textColor="@color/color_666"
+                android:textSize="12dp"
+                android:visibility="gone" />
+            <View
+                android:layout_width="1dp"
+                android:background="#D0D4DD"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:drawableTop="@mipmap/ic_share"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:text="分享海报"
+                android:textColor="@color/color_666"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

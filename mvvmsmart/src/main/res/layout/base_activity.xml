@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/title_status_bar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_title"
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolBarStyle_black"
+            android:visibility="gone"
+            app:navigationIcon="@mipmap/icon_fh_black">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:text="Title" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</layout>

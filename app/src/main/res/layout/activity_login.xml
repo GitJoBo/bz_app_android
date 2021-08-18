@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.LoginActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.wzq.mvvmsmart.base.BaseViewModelMVVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_title"
+            android:inputType="phone"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/please_enter_the_phone_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_login_verification_code"
+            android:layout_width="wrap_content"
+            android:minWidth="120dp"
+            android:maxWidth="280dp"
+            android:layout_height="@dimen/height_title"
+            android:inputType="number"
+            android:hint="请输入验证码"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/et_login_phone"
+            app:layout_constraintTop_toBottomOf="@id/et_login_phone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击获取验证码后填入888888,测试专用"
+            android:textSize="12dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/et_login_verification_code"
+            app:layout_constraintStart_toStartOf="@id/et_login_verification_code"/>
+
+        <Button
+            android:id="@+id/btn_login_send_code"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/login_btn_selector"
+            android:clickable="false"
+            android:text="@string/login_send_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_register_btn_code_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/et_login_phone"
+            app:layout_constraintTop_toTopOf="@id/et_login_verification_code" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/login_btn_selector"
+            android:clickable="false"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_register_btn_code_text_size"
+            app:layout_constraintTop_toBottomOf="@id/btn_login_send_code"
+            android:layout_marginTop="50dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

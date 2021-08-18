@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/setting_item_margin_start" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/TextStyle.Alignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/setting_item_margin"
+        android:layout_toEndOf="@id/iv_image"
+        android:textColor="@color/setting_item_content"
+        android:textSize="@dimen/setting_item_text_size" />
+
+    <ImageView
+        android:id="@+id/iv_tag_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/setting_item_margin"
+        android:layout_toEndOf="@id/tv_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/setting_item_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/TextStyle.Alignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/setting_item_value"
+            android:textSize="@dimen/setting_item_text_size" />
+
+        <com.bizeng.lh.widget.switchbutton.SwitchButton
+            android:id="@+id/sb_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/switch_btn_check_selector"
+            app:kswBackMeasureRatio="1.5"
+            app:kswThumbMargin="1dp"
+            app:kswThumbDrawable="@drawable/ic_switch_btn_thumb"
+            app:kswThumbRadius="10dp" />
+
+        <ImageView
+            android:id="@+id/iv_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_right_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_item_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/setting_item_margin"
+        android:background="@color/setting_item_divider" />
+</RelativeLayout>

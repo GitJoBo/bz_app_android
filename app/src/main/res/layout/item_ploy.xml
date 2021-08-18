@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_ploy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="162dp">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/shadow_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="@dimen/shadow_layout_limit"
+        app:hl_shadowOffsetY="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:background="@drawable/select_stoke_c97c_f4f" />
+    </com.lihang.ShadowLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_ploy_rv_name"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:drawableLeft="@mipmap/ic_ploy"-->
+<!--        android:drawablePadding="10dp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:maxLines="1"-->
+<!--        android:maxWidth="@dimen/ploy_title_max_width"-->
+<!--        android:text="BTC"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/shadow_layout"-->
+<!--        app:layout_constraintTop_toTopOf="@id/shadow_layout" />-->
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/historical_backtest_annualization_rate"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@id/shadow_layout"
+        app:layout_constraintTop_toBottomOf="@id/ll_ploy_rv_name" />
+
+    <!--    <View-->
+    <!--        android:id="@+id/view_2"-->
+    <!--        android:layout_width="1dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginStart="22dp"-->
+    <!--        android:background="@color/eee"-->
+    <!--        android:visibility="invisible"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/tv_1"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/tv_ploy_annualized_rate"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/tv_ploy_annualized_rate" />-->
+
+    <TextView
+        android:id="@+id/tv_ploy_annualized_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxWidth="150dp"
+        android:maxLines="1"
+        android:text="999.99%"
+        android:textColor="@color/color_377"
+        android:textSize="21dp"
+        app:layout_constraintStart_toStartOf="@id/tv_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+    <TextView
+        android:id="@+id/tv_ploy_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:ellipsize="end"
+        android:maxWidth="300dp"
+        android:maxLines="1"
+        android:text="投资复合策略"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/shadow_layout"
+        app:layout_constraintStart_toStartOf="@id/tv_ploy_annualized_rate" />
+
+    <TextView
+        android:id="@+id/tv_number_of_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxWidth="150dp"
+        android:maxLines="1"
+        android:text="1千+"
+        android:textColor="@color/black"
+        android:textSize="21dp"
+        app:layout_constraintStart_toStartOf="@id/tv_2"
+        app:layout_constraintTop_toBottomOf="@id/tv_2" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:text="@string/cumulative_users"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@id/tv_1"
+        app:layout_constraintTop_toTopOf="@id/tv_1" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_ploy_"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/shadow_layout"
+        app:layout_constraintStart_toStartOf="@id/tv_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_ploy_annualized_rate"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_ploy_rv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="@id/shadow_layout"
+        app:layout_constraintStart_toStartOf="@id/shadow_layout"
+        app:layout_constraintTop_toTopOf="@id/shadow_layout">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_ploy_rv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_ploy"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="BTC"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_ploy_label_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/shape_cdfa_stroke"
+                android:paddingStart="4dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="2dp"
+                android:text="热门"
+                android:textColor="#ffdfa01e"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/tv_ploy_label_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/shape_cdf1_stroke"
+                android:paddingStart="4dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="2dp"
+                android:text="最新"
+                android:textColor="@color/red"
+                android:textSize="10dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

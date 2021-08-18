@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <dimen name="height_title">50dp</dimen>
+    <dimen name="login_register_btn_code_text_size">18dp</dimen>
+
+    <dimen name="common_dialog_width">300dp</dimen>
+    <dimen name="common_dialog_line_width">1dp</dimen>
+    <dimen name="common_dialog_min_height">134dp</dimen>
+    <dimen name="common_dialog_button_height">44dp</dimen>
+    <dimen name="common_dialog_common_min_height">90dp</dimen>
+    <dimen name="common_dialog_title_text_size">16dp</dimen>
+    <dimen name="common_dialog_text_size">14dp</dimen>
+    <dimen name="common_dialog_text_margin_left">30dp</dimen>
+    <dimen name="common_dialog_text_margin_right">30dp</dimen>
+    <dimen name="common_dialog_text_margin_top">20dp</dimen>
+    <dimen name="common_dialog_title_text_margin_top">30dp</dimen>
+    <dimen name="common_dialog_text_margin_bottom">20dp</dimen>
+
+    <dimen name="title_status_bar">0dp</dimen>
+
+    <dimen name="setting_item_def_height">48dp</dimen>
+    <dimen name="setting_item_margin">12dp</dimen>
+    <dimen name="setting_item_margin_start">16dp</dimen>
+    <dimen name="setting_item_text_size">16dp</dimen>
+    <dimen name="setting_item_divider">0.5dp</dimen>
+
+    <dimen name="mine_setting_item_height">58dp</dimen>
+    <dimen name="mine_setting_item_margin_top">10dp</dimen>
+    <dimen name="shadow_layout_corner_radius">4dp</dimen>
+    <dimen name="shadow_layout_limit">4dp</dimen>
+    <dimen name="title2_top">12dp</dimen>
+    <dimen name="dp_351">351dp</dimen>
+    <dimen name="shadow_layout_12dp_width351">8dp</dimen>
+    <dimen name="drawable_padding_10dp">10dp</dimen>
+    <dimen name="ploy_title_max_width">180dp</dimen>
+</resources>

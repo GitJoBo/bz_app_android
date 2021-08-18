@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+        <include
+            android:id="@+id/include_title"
+            layout="@layout/layout_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.core.widget.NestedScrollView
+                style="@style/nested_scrollview">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_mainstream_currency_market"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="主流币行情"
+                        android:textColor="#ff000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_why"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@mipmap/ic_why"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mainstream_currency_market"
+                        app:layout_constraintStart_toEndOf="@id/tv_mainstream_currency_market"
+                        app:layout_constraintTop_toTopOf="@id/tv_mainstream_currency_market" />
+
+                    <ImageView
+                        android:id="@+id/iv_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:src="@mipmap/ic_news_refresh"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mainstream_currency_market"
+                        app:layout_constraintEnd_toStartOf="@id/tv_news_time"
+                        app:layout_constraintTop_toTopOf="@id/tv_mainstream_currency_market" />
+
+                    <TextView
+                        android:id="@+id/tv_news_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:drawablePadding="5dp"
+                        android:textColor="#ff919aa4"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_mainstream_currency_market"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_mainstream_currency_market"
+                        tools:text="更新时间:3.20 12:00" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="112dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="2dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintTop_toBottomOf="@id/tv_mainstream_currency_market" />
+
+                    <TextView
+                        android:id="@+id/tv_data_sources"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="数据来源于非小号！"
+                        android:textColor="#D2A05F"
+                        android:textSize="10dp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recycler_view_price" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="3dp"
+                        android:layout_marginBottom="10dp"
+                        android:max="100"
+                        android:progress="1"
+                        android:progressBackgroundTint="#E2E5ED"
+                        android:progressTint="#2F58B8"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/view_1"
+                        app:layout_constraintEnd_toEndOf="@id/recycler_view_price"
+                        app:layout_constraintStart_toStartOf="@id/recycler_view_price" />
+
+                    <View
+                        android:id="@+id/view_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/color_f5f"
+                        app:layout_constraintTop_toBottomOf="@id/tv_data_sources" />
+
+                    <TextView
+                        android:id="@+id/tv_news_leader_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="币增排行榜"
+                        android:textColor="#ff000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+                    <com.angcyo.tablayout.DslTabLayout
+                        android:id="@+id/dsl_tab_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_news_leader_board"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_news_leader_board"
+                        app:tab_deselect_color="#919AA4"
+                        app:tab_draw_indicator="true"
+                        app:tab_indicator_color="@color/text_245"
+                        app:tab_indicator_enable_flow="true"
+                        app:tab_indicator_shape="RECTANGLE"
+                        app:tab_indicator_solid_color="#2F58B8"
+                        app:tab_indicator_style="STYLE_BOTTOM"
+                        app:tab_indicator_width="WRAP_CONTENT"
+                        app:tab_indicator_width_offset="-9dp"
+                        app:tab_select_color="#2F58B8"
+                        tools:tab_default_index="0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="日"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="月"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="年"
+                            android:textSize="16dp" />
+
+                    </com.angcyo.tablayout.DslTabLayout>
+
+                    <View
+                        android:id="@+id/view_dsl"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:background="@color/eee"
+                        app:layout_constraintTop_toBottomOf="@id/dsl_tab_layout" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/view_pager2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:minHeight="232dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view_dsl" />
+
+                    <View
+                        android:id="@+id/view_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/color_f5f"
+                        app:layout_constraintTop_toBottomOf="@id/view_pager2" />
+
+                    <TextView
+                        android:id="@+id/tv_news_hot_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="新闻资讯"
+                        android:textColor="#ff000000"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_mainstream_currency_market"
+                        app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+                    <TextView
+                        android:id="@+id/tv_news_hot_new_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@id/tv_news_time"
+                        app:layout_constraintTop_toTopOf="@id/tv_news_hot_new"
+                        tools:visibility="visible" />
+
+                    <View
+                        android:id="@+id/view_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/eee"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@id/tv_news_hot_new"
+                        tools:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_news_hot_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintTop_toBottomOf="@id/view_5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_rv"
+    android:layout_width="@dimen/dp_351"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glide_line_member_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0455" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glide_line_cumulative_advance_receipt_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.456" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glide_line_accumulative_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.729" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glide_line_arrival_rate_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.957" />
+
+    <TextView
+        android:id="@+id/tv_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="9496"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glide_line_member_start"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="好友" />
+
+    <TextView
+        android:id="@+id/tv_cumulative_advance_receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:text="0.00 U"
+        android:textColor="@color/color_f1a"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/glide_line_cumulative_advance_receipt_end"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="累计预估" />
+
+    <TextView
+        android:id="@+id/tv_accumulative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:text="0.00 U"
+        android:textColor="@color/color_f1a"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/glide_line_accumulative_end"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="累计到账" />
+
+    <TextView
+        android:id="@+id/tv_arrival_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="100%"
+        android:textColor="@color/color_f1a"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/glide_line_arrival_rate_end"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="到账率" />
+</androidx.constraintlayout.widget.ConstraintLayout>

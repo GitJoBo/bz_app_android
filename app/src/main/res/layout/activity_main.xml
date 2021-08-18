@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.wzq.mvvmsmart.base.BaseViewModelMVVM" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--        <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+        <!--            android:id="@+id/smart_refresh"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1">-->
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!--        </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:background="#F0F0F0" />-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="30dp">
+
+            <me.majiajie.pagerbottomtabstrip.PageNavigationView
+                android:id="@+id/pager_bottom_tab"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="2dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:elevation="8dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

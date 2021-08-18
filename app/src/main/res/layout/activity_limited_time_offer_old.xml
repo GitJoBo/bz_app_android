@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_bg_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_limited_time_offer"
+            android:scaleType="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/sl_bg"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/shadow_layout_12dp_width351"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="@dimen/shadow_layout_12dp_width351"
+            app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+            app:hl_shadowColor="@color/shadow_color"
+            app:hl_shadowLimit="@dimen/shadow_layout_limit"
+            app:hl_shadowOffsetY="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_white_r5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_preferential_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="22dp"
+                    android:text="优惠条件"
+                    android:textColor="@color/text_black"
+                    android:textSize="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_limited_time_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginEnd="18dp"/>
+            </LinearLayout>
+        </com.lihang.ShadowLayout>
+
+
+        <Button
+            android:id="@+id/btn_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="44dp"
+            android:background="@drawable/login_btn_selector"
+            android:clickable="false"
+            android:text="去充币"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_register_btn_code_text_size"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

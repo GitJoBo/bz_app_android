@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">币增</string>
+<!--    <string name="login_send_code">获取验证码</string>-->
+    <string name="login_send_code">@string/send_verification_code</string>
+<!--    <string name="login_send_code2">获取</string>-->
+    <string name="login_send_code2">@string/send_verification_code</string>
+    <string name="please_enter_the_phone_number">请输入手机号码</string>
+    <string name="login">登录</string>
+
+    <string name="common_confirm">确认</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_done">完成</string>
+    <string name="common_save">保存</string>
+
+
+    <string name="dialog_insufficient_points">您的点卡余额已不足，请先兑换点卡</string>
+    <string name="dialog_recharge">去兑换</string>
+    <string name="dialog_not_a_gold_member">您目前还不是金卡会员，暂时不能使用此策略</string>
+    <string name="dialog_how_to_become_a_gold_member">成为金卡会员</string>
+    <string name="dialog_you_have_already_added_this_strategy">您已经添加此策略</string>
+    <string name="dialog_strategy_operations_center">AI量化操作中心</string>
+    <string name="dialog_choose_an_exchange">选择交易所</string>
+    <string name="dialog_set_position_capacity">设置仓位容量</string>
+    <string name="dialog_pause_strategy">暂停策略</string>
+    <string name="dialog_confirm_suspension">确认暂停(5s)</string>
+    <string name="dialog_pause_strategy_info">1、策略暂停行情监控和量化交易。\n2、不影响已有订单和持仓，用户可随时恢复运行。</string>
+    <string name="dialog_recovery_strategy">恢复策略</string>
+    <string name="dialog_confirm_recovery">确认恢复(5s)</string>
+    <string name="dialog_recovery_strategy_info">1、恢复策略具体做哪些操作\n2、恢复策略的影响</string>
+    <string name="dialog_reset_strategy">重置策略</string>
+    <string name="dialog_confirm_reset">确认重置(5s)</string>
+    <string name="dialog_reset_strategy_info">1、策略重新启动进行行情监控和量化交易。\n2、重置前策略已创建的订单及持仓，需要用户手动操作。</string>
+    <string name="dialog_delete_strategy">删除策略</string>
+    <string name="dialog_delete_strategy_info">1、策略立即永久性的停止交易。\n2、策略创建的订单及持仓，需要用户手动操作。
+</string>
+    <string name="dialog_confirm_deletion">确认删除(5s)</string>
+
+    <string name="network_error">当前无网络，请检查你的网络设置</string>
+    <string name="notify_no_network">网络连接不可用，请稍后重试！</string>
+    <string name="esky_service_exception">网络不给力，请稍候重试！</string>
+    <string name="time_out_please_try_again_later">连接超时,请稍后再试</string>
+    <string name="logout">注销登录</string>
+    <string name="software_version">软件版本</string>
+    <string name="software_upgrade">检查版本</string>
+    <string name="are_you_sure_to_log_out">确定注销登录吗？</string>
+    <string name="not_login">未登录</string>
+    <string name="the_announcement">公告</string>
+    <string name="the_tutorial_section">教程专区</string>
+    <string name="more">更多</string>
+    <string name="quantitative_introduction">量化介绍</string>
+    <string name="click_on_the_understanding">点击了解</string>
+    <string name="buy_currency_guidance">买币指导</string>
+    <string name="security">安全保障</string>
+    <string name="policy_recommendations">策略推荐</string>
+    <string name="popular_consultation">行业焦点</string>
+    <string name="learn_through">学会穿越</string>
+    <string name="look_more">查看更多</string>
+
+    <string name="zxing_msg_camera_framework_bug">对不起，Android摄像头遇到问题，您需要重启设备</string>
+    <string name="zxing_distinguish_picture">识别图中二维码</string>
+    <string name="zxing_qr_can_not_recognized">该二维码无法识别</string>
+    <string name="zxing_open_light">打开</string>
+    <string name="zxing_close_light">关闭</string>
+    <string name="zxing_tips_qrcode_scan">将二维码放入框内，即可自动扫描</string>
+    <string name="zxing_scan_from_picture">选择图片</string>
+    <string name="cny">≈ %s CNY</string>
+    <string name="ucny">%sU ≈ %s CNY</string>
+    <string name="tv_service_ip">当前服务器IP地址</string>
+    <string name="my_team">我的好友</string>
+
+    <string name="tv_over">可用%sUSDT</string>
+    <string name="please_agree_to_the_agreement">请同意协议后操作</string>
+    <string name="please_enter_phone_number">请输入手机号</string>
+    <string name="the_phone_number_format_is_wrong">手机号格式有误</string>
+    <string name="please_confirm_the_verification_code">请确认验证码</string>
+    <string name="send_verification_code">发送验证码</string>
+    <string name="friends_rebate">好友返利</string>
+    <string name="tips">温馨提示</string>
+    <string name="tips_content">如果您已确定支付成功，请耐心等待一段时间，出于安全考虑，USDT支付到账需要一段时间的网络确认后支付才能生效</string>
+    <string name="continue_to_pay">继续支付</string>
+    <string name="view_records">查看记录</string>
+    <string name="coin_recharge_point_card">币增充点卡</string>
+    <string name="permission_denied">没有权限，操作失败</string>
+    <string name="copy_successfully">复制成功</string>
+    <string name="redeem_card">兑换点卡</string>
+    <string name="historical_backtest_annualization_rate">历史回测年化率</string>
+    <string name="cumulative_users">累计使用人次</string>
+
+
+</resources>

@@ -1,0 +1,8 @@
+include ':rxhttp'
+//include ':rxhttp-annotation'
+//include ':rxhttp'
+include ':share2'
+include ':dialoglib'
+include ':mvvmsmart'
+include ':app'
+rootProject.name = "LH"

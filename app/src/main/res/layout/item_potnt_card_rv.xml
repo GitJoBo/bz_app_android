@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_rv"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="充币"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--    android:layout_marginStart="18dp"-->
+
+    <TextView
+        android:id="@+id/tv_gift_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[充点]充币50U"
+        android:textColor="@color/color_377"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@id/tv_type"
+        app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+    <TextView
+        android:id="@+id/tv_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+88.08 点"
+        android:textColor="@color/color_377"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_type" />
+<!--            android:layout_marginEnd="18dp"-->
+
+    <TextView
+        android:id="@+id/tv_point_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="2021.03.23 20:12:09"
+        android:textColor="@color/color_999"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_point"
+        app:layout_constraintTop_toBottomOf="@id/tv_point" />
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/eee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_point_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

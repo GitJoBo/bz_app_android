@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            style="@style/nested_scrollview">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F7F9"
+                android:gravity="bottom|right"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_mine_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/bg_mine"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_mine_logo"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="62dp"
+                    android:background="@mipmap/ic_mine_logo"
+                    app:layout_constraintStart_toStartOf="@id/iv_mine_bg"
+                    app:layout_constraintTop_toTopOf="@id/iv_mine_bg" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_mine_logo_edit"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_mine_logo"
+                    app:layout_constraintEnd_toEndOf="@id/iv_mine_logo" />
+
+                <TextView
+                    android:id="@+id/tv_mine_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:maxLines="1"
+                    android:text="币增AI平台"
+                    android:textColor="#ff333333"
+                    android:textSize="21dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_mine_logo"
+                    app:layout_constraintTop_toTopOf="@id/iv_mine_logo" />
+
+                <TextView
+                    android:id="@+id/tv_mine_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="手机号:183****6666"
+                    android:textColor="#ff12213d"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_mine_logo"
+                    app:layout_constraintStart_toStartOf="@id/tv_mine_nick" />
+
+                <ImageView
+                    android:id="@+id/iv_vip_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:background="@mipmap/ic_vip_diamond"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_mine_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="14dp"
+                    android:shadowColor="#1a000000"
+                    android:text="1200积分"
+                    android:textColor="#ff847c73"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_vip_bg"
+                    app:layout_constraintTop_toTopOf="@id/iv_vip_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="86dp"
+                    android:shadowColor="#1a000000"
+                    android:text="800积分"
+                    android:textColor="#ff847c73"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_vip_bg"
+                    app:layout_constraintTop_toTopOf="@id/iv_vip_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:shadowColor="#1a000000"
+                    android:text="距升级百夫长会员还需80积分"
+                    android:textColor="#ff847c73"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_vip_bg"
+                    app:layout_constraintStart_toStartOf="@id/iv_vip_bg" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_bz_report_center"
+                    style="@style/mine_setting_item_view"
+                    app:item_content="量化统计报表"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_image="@mipmap/ic_bz_report_center"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_vip_bg" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_my_point_card"
+                    style="@style/mine_setting_item_view"
+                    app:item_content="我的点卡"
+                    app:item_value="首充送会员"
+                    app:item_value_text_color="@color/text_ebc"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_my_point_card"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_bz_report_center" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_my_good_friend"
+                    style="@style/mine_setting_item_view"
+                    android:layout_marginTop="0dp"
+                    app:item_content="我的好友"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_my_good_friend"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_my_point_card" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_qr_code_recommendation"
+                    style="@style/mine_setting_item_view"
+                    android:layout_marginTop="0dp"
+                    app:item_content="二维码推荐"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_qr"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_my_good_friend" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_api_management"
+                    style="@style/mine_setting_item_view"
+                    android:layout_marginTop="0dp"
+                    app:item_content="交易所API管理"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_api"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_qr_code_recommendation" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_change_phone"
+                    style="@style/mine_setting_item_view"
+                    app:item_content="更换手机号"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_phone"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_api_management" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_contact_customer_service"
+                    style="@style/mine_setting_item_view"
+                    android:layout_marginTop="0dp"
+                    app:item_content="联系客服"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_contact_customer_service"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_change_phone" />
+
+                <com.bizeng.lh.widget.view.SettingItemView
+                    android:id="@+id/siv_mine_setting"
+                    style="@style/mine_setting_item_view"
+                    android:layout_marginTop="0dp"
+                    app:item_content="设置"
+                    app:item_content_text_color="@color/text_black"
+                    app:item_divider="true"
+                    app:item_image="@mipmap/ic_mine_setting"
+                    app:item_right_image="@mipmap/ic_mine_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/siv_mine_contact_customer_service" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</layout>

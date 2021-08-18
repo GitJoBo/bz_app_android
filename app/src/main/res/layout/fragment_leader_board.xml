@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_leader_board"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_load_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="@string/look_more"
+            android:textColor="#ff919aa4"
+            android:textSize="14dp" />
+    </LinearLayout>
+</layout>

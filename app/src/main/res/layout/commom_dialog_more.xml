@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/eee"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_more_modify_warehouse_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="修改仓库容量" />
+
+    <TextView
+        android:id="@+id/tv_dialog_more_pause_strategy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="暂停策略" />
+
+    <TextView
+        android:id="@+id/tv_dialog_more_reset_strategy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="重置策略" />
+
+    <TextView
+        android:id="@+id/tv_dialog_more_delete_strategy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="删除策略" />
+
+    <TextView
+        android:id="@+id/tv_dialog_more_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消" />
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f5f">
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/iv_report_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+        app:hl_shadowColor="@color/shadow_color"
+        app:hl_shadowLimit="@dimen/shadow_layout_limit"
+        app:hl_shadowOffsetY="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="351dp"
+            android:layout_height="157dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_white_r5" />
+    </com.lihang.ShadowLayout>
+
+<!--ic_tactics-->
+    <TextView
+        android:id="@+id/tv_report_strategy_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:drawableLeft="@mipmap/ic_tactics"
+        android:drawablePadding="5dp"
+        android:text="策略A"
+        android:textColor="#ff333333"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/iv_report_bg"
+        app:layout_constraintTop_toTopOf="@id/iv_report_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_report_strategy_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_report_strategy_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_report_bg"
+        android:layout_marginEnd="18dp"
+        android:background="@mipmap/ic_right"/>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/eee"
+        app:layout_constraintEnd_toEndOf="@id/iv_report_bg"
+        app:layout_constraintStart_toStartOf="@id/iv_report_bg"
+        app:layout_constraintTop_toBottomOf="@id/tv_report_strategy_name" />
+
+    <TextView
+        android:id="@+id/tv_cumulative_currency_increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="累计币增"
+        android:textColor="#ff999999"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/tv_report_strategy_name"
+        app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+    <TextView
+        android:id="@+id/tv_cumulative_currency_increase_u"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="+88.08 U"
+        android:textColor="@color/text_black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/tv_cumulative_currency_increase"
+        app:layout_constraintTop_toBottomOf="@id/tv_cumulative_currency_increase" />
+
+    <TextView
+        android:id="@+id/tv_cumulative_currency_increase_cny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="≈32181.98 CNY"
+        android:textColor="@color/color_e15"
+        android:textSize="14dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_cumulative_currency_increase_u"
+        app:layout_constraintTop_toBottomOf="@id/tv_cumulative_currency_increase_u" />
+
+    <TextView
+        android:id="@+id/tv_end_time_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="75dp"
+        android:text="统计截止日期"
+        android:textColor="#ff999999"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_report_bg"
+        app:layout_constraintTop_toTopOf="@id/tv_cumulative_currency_increase" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2021-03-23"
+        android:textColor="#ff333333"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@id/tv_end_time_key"
+        app:layout_constraintBottom_toBottomOf="@id/tv_cumulative_currency_increase_u"
+        app:layout_constraintTop_toTopOf="@id/tv_cumulative_currency_increase_u" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

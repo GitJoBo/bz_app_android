@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_leader_board_head"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/shape_top_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_leader_board_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="1"
+        android:textColor="#ffffffff"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_leader_board_head"
+        app:layout_constraintStart_toStartOf="@id/iv_leader_board_head"
+        app:layout_constraintTop_toTopOf="@id/iv_leader_board_head" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOP"
+        android:textColor="#ffffffff"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@id/iv_leader_board_head"
+        app:layout_constraintStart_toStartOf="@id/iv_leader_board_head"
+        app:layout_constraintTop_toBottomOf="@id/tv_leader_board_num" />
+
+    <TextView
+        android:id="@+id/tv_leader_board_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:textColor="@color/text_black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_leader_board_head"
+        app:layout_constraintStart_toEndOf="@id/iv_leader_board_head"
+        app:layout_constraintTop_toTopOf="@id/iv_leader_board_head"
+        tools:text="@string/learn_through" />
+
+    <TextView
+        android:id="@+id/tv_leader_board_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="#666666"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_leader_board_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_leader_board_head"
+        tools:text="日币增AI数量0.00" />
+
+    <View
+        android:id="@+id/view_decoration"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/eee"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_leader_board_head"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

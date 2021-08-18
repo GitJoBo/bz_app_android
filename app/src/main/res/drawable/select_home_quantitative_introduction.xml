@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    压下效果图片-->
+    <item android:drawable="@mipmap/ic_home_quantitative_introduction_on" android:state_pressed="true" />
+    <!--    未按压作图片-->
+    <item android:drawable="@mipmap/ic_home_quantitative_introduction" android:state_enabled="true" />
+</selector>

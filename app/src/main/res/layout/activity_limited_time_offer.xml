@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_161"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_bg_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/bg_recharge"
+                    android:scaleType="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/sl_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/shadow_layout_12dp_width351"
+                    android:layout_marginTop="275dp"
+                    android:layout_marginEnd="@dimen/shadow_layout_12dp_width351"
+                    android:layout_marginBottom="20dp"
+                    android:minHeight="400dp"
+                    app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+                    app:hl_shadowColor="@color/shadow_color"
+                    app:hl_shadowLimit="@dimen/shadow_layout_limit"
+                    app:hl_shadowOffsetY="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_white_r5" />
+                </com.lihang.ShadowLayout>
+
+                <TextView
+                    android:id="@+id/tv_preferential_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="31dp"
+                    android:text="优惠条件"
+                    android:textColor="@color/text_black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/sl_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/shape_ceeefff_r6"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="5dp"
+                    android:text="1USDT = 1点"
+                    android:textColor="#ff2457bf"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_preferential_terms"
+                    app:layout_constraintStart_toEndOf="@id/tv_preferential_terms"
+                    app:layout_constraintTop_toTopOf="@id/tv_preferential_terms" />
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="28dp"
+                    android:text="点卡点数可用于抵扣币增平台各类收益的手续费，限时增点政策，充的越多，增的越多，用返利余额兑换点卡增上加赠。"
+                    android:textColor="@color/color_999"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_preferential_terms" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_limited_time_offer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="10dp"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="@id/sl_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_info" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/main_bar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/color_161"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/main_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_title"
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolBarStyle_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@mipmap/icon_fh_black_white">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:text="Title" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+        <include
+            android:id="@+id/include_title"
+            layout="@layout/layout_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.core.widget.NestedScrollView
+                style="@style/nested_scrollview"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <!--                                        登录显示-->
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/group_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            app:constraint_referenced_ids="iv_bg_ploy_strategy_operations_center,tv_strategy_operations_center
+,tv_strategy_operations_center2,iv_bg_ploy_report_form,tv_ploy_report_form,tv_ploy_report_form2,iv_bg_ploy_exchange_api_management,
+tv_ploy_exchange_api_management,tv_ploy_exchange_api_management2,iv_bg_cf5f_h10"
+                            tools:visibility="visible" />
+
+                        <!--                                        未登录显示-->
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/group_not_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="iv_ploy_not_login,tv_ploy_not_login_1,
+                                                tv_ploy_not_login_2,btn_ploy_login,iv_bg_cf5f_h10_not_login"
+                            tools:visibility="gone" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline_v50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <ImageView
+                            android:id="@+id/iv_ploy_not_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/bg_ploy_not_login"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_ploy_not_login_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="36dp"
+                            android:gravity="center"
+                            android:text="币增策略·一手掌握"
+                            android:textColor="#333333"
+                            android:textSize="21dp"
+                            android:letterSpacing="0.16"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@id/iv_ploy_not_login"
+                            app:layout_constraintStart_toStartOf="@id/iv_ploy_not_login"
+                            app:layout_constraintTop_toTopOf="@id/iv_ploy_not_login" />
+
+                        <TextView
+                            android:id="@+id/tv_ploy_not_login_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="请登录后查看您的币增数据"
+                            android:textColor="#5D668B"
+                            android:textSize="14dp"
+                            android:letterSpacing="0.16"
+                            app:layout_constraintEnd_toEndOf="@id/tv_ploy_not_login_1"
+                            app:layout_constraintStart_toStartOf="@id/tv_ploy_not_login_1"
+                            app:layout_constraintTop_toBottomOf="@id/tv_ploy_not_login_1" />
+
+                        <Button
+                            android:id="@+id/btn_ploy_login"
+                            android:layout_width="210dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="43dp"
+                            android:background="@drawable/shape_c345bba_r6"
+                            android:text="立即登录"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="@id/iv_ploy_not_login"
+                            app:layout_constraintEnd_toEndOf="@id/iv_ploy_not_login"
+                            app:layout_constraintStart_toStartOf="@id/iv_ploy_not_login" />
+
+                        <ImageView
+                            android:id="@+id/iv_bg_ploy_strategy_operations_center"
+                            android:layout_width="357dp"
+                            android:layout_height="94dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@mipmap/bg_ploy_strategy_operations_center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_bg_ploy_report_form"
+                            android:layout_width="176dp"
+                            android:layout_height="94dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@mipmap/bg_ploy_report_form"
+                            app:layout_constraintStart_toStartOf="@id/iv_bg_ploy_strategy_operations_center"
+                            app:layout_constraintTop_toBottomOf="@id/iv_bg_ploy_strategy_operations_center" />
+
+                        <ImageView
+                            android:id="@+id/iv_bg_ploy_exchange_api_management"
+                            android:layout_width="176dp"
+                            android:layout_height="94dp"
+                            android:background="@mipmap/bg_ploy_exchange_api_management"
+                            app:layout_constraintEnd_toEndOf="@id/iv_bg_ploy_strategy_operations_center"
+                            app:layout_constraintTop_toTopOf="@id/iv_bg_ploy_report_form" />
+
+                        <ImageView
+                            android:id="@+id/iv_bg_cf5f_h10"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@color/color_f5f"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/iv_bg_ploy_report_form" />
+
+                        <ImageView
+                            android:id="@+id/iv_bg_cf5f_h10_not_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@color/color_f5f"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/iv_ploy_not_login" />
+
+                        <TextView
+                            android:id="@+id/tv_strategy_operations_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/dialog_strategy_operations_center"
+                            android:textColor="#ff122c4d"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/iv_bg_ploy_strategy_operations_center"
+                            app:layout_constraintTop_toTopOf="@id/iv_bg_ploy_strategy_operations_center" />
+
+                        <TextView
+                            android:id="@+id/tv_strategy_operations_center2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:text="量化交易轻松赚币"
+                            android:textColor="#ff7d8894"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="@id/tv_strategy_operations_center"
+                            app:layout_constraintTop_toBottomOf="@id/tv_strategy_operations_center" />
+
+                        <TextView
+                            android:id="@+id/tv_ploy_report_form"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="量化统计报表"
+                            android:textColor="#ff122c4d"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/iv_bg_ploy_report_form"
+                            app:layout_constraintTop_toTopOf="@id/iv_bg_ploy_report_form" />
+
+                        <TextView
+                            android:id="@+id/tv_ploy_report_form2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:drawableRight="@mipmap/ic_right_two"
+                            android:text="查看"
+                            android:textColor="#ff888888"
+                            android:textSize="14dp"
+                            app:layout_constraintTop_toBottomOf="@id/tv_ploy_report_form"
+                            app:layout_constraintStart_toStartOf="@id/tv_ploy_report_form" />
+
+                        <TextView
+                            android:id="@+id/tv_ploy_exchange_api_management"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="交易所API管理"
+                            android:textColor="#ff122c4d"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/iv_bg_ploy_exchange_api_management"
+                            app:layout_constraintTop_toTopOf="@id/iv_bg_ploy_exchange_api_management" />
+
+                        <TextView
+                            android:id="@+id/tv_ploy_exchange_api_management2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:drawableRight="@mipmap/ic_right_two"
+                            android:text="查看"
+                            android:textColor="#ff888888"
+                            android:textSize="14dp"
+                            app:layout_constraintTop_toBottomOf="@id/tv_ploy_exchange_api_management"
+                            app:layout_constraintStart_toStartOf="@id/tv_ploy_exchange_api_management" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tv_ploy_featured_strategy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="AI量化策略"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cl" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_ploy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ploy_featured_strategy" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+
+</layout>

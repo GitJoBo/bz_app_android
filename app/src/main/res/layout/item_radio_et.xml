@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/common_dialog_text_margin_left"
+    android:paddingStart="@dimen/common_dialog_text_margin_left"
+    android:paddingBottom="20dp"
+    >
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/cl_group_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="et_warehouse_capacity,tv_u"
+        tools:visibility="visible" />
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/cl_group_api"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:constraint_referenced_ids="tv_exp_api,tv_click_api"-->
+    <!--        tools:visibility="visible" />-->
+
+    <CheckBox
+        android:id="@+id/cb_rv"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintStart_toEndOf="@id/cb_rv"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:text="火币" />
+
+    <TextView
+        android:id="@+id/tv_exp_api"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="暂未绑定"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_click_api"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="添加API"
+        android:textColor="@color/red"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cb_rv"
+        app:layout_constraintStart_toEndOf="@id/tv_exp_api"
+        app:layout_constraintTop_toTopOf="@id/cb_rv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:maxLines="2"
+        android:text="仓库容量需要大于500U"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/cb_rv" />
+
+    <EditText
+        android:id="@+id/et_warehouse_capacity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_warehouse_capacity"
+        android:hint="请输入仓库容量"
+        android:inputType="number"
+        android:paddingStart="10dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_legend"
+        app:layout_constraintTop_toBottomOf="@id/tv_legend" />
+
+    <TextView
+        android:id="@+id/tv_u"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="U"
+        app:layout_constraintBottom_toBottomOf="@id/et_warehouse_capacity"
+        app:layout_constraintEnd_toEndOf="@id/et_warehouse_capacity"
+        app:layout_constraintTop_toTopOf="@id/et_warehouse_capacity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

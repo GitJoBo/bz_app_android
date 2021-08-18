@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glide_line_member_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.075" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glide_line_cumulative_advance_receipt_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.46" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glide_line_accumulative_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.715" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glide_line_arrival_rate_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.928" />
+
+            <TextView
+                android:id="@+id/tv_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="好友"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/glide_line_member_start"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="预估汇总"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/glide_line_cumulative_advance_receipt_end"
+                app:layout_constraintTop_toTopOf="@+id/tv_member" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="到账汇总"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/glide_line_accumulative_end"
+                app:layout_constraintTop_toTopOf="@+id/tv_member" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="到账率"
+                android:textColor="@color/text_black"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/glide_line_arrival_rate_end"
+                app:layout_constraintTop_toTopOf="@+id/tv_member" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="14dp"
+                android:overScrollMode="never"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

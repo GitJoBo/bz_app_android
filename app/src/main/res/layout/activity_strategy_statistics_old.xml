@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_bar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:paddingTop="30dp"
+            android:theme="@style/ToolBarStyle_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@mipmap/icon_fh_black">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                tools:text="Title" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scroll_view"
+                style="@style/nested_scrollview">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="30dp">
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/iv_bg"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:background="@mipmap/bg_strategy_statistics"-->
+                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <com.lihang.ShadowLayout
+                        android:id="@+id/sl_bg_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/shadow_layout_12dp_width351"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="@dimen/shadow_layout_12dp_width351"
+                        android:padding="5dp"
+                        app:hl_cornerRadius="8dp"
+                        app:hl_shadowColor="@color/shadow_color"
+                        app:hl_shadowLimit="@dimen/shadow_layout_limit"
+                        app:hl_shadowOffsetY="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="138dp"
+                            android:background="@mipmap/bg_strategy_increase" />
+                    </com.lihang.ShadowLayout>
+
+                    <TextView
+                        android:id="@+id/tv_cumulative_currency_increase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="23dp"
+                        android:text="累计币增："
+                        android:textColor="@color/color_d3d"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="@id/sl_bg_time"
+                        app:layout_constraintTop_toTopOf="@id/sl_bg_time" />
+
+                    <TextView
+                        android:id="@+id/tv_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="0.0000"
+                        android:textColor="@color/white"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_cumulative_currency_increase"
+                        app:layout_constraintTop_toBottomOf="@id/tv_cumulative_currency_increase" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text=" U"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_u"
+                        app:layout_constraintStart_toEndOf="@id/tv_u" />
+
+                    <TextView
+                        android:id="@+id/tv_cny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="≈ 0.00 CNY"
+                        android:textColor="@color/color_d3d"
+                        android:textSize="12dp"
+                        app:layout_constraintStart_toStartOf="@id/tv_u"
+                        app:layout_constraintTop_toBottomOf="@id/tv_u" />
+
+                    <TextView
+                        android:id="@+id/tv_today_increase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="101dp"
+                        android:text="今日币增："
+                        android:textColor="@color/color_d3d"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toEndOf="@id/tv_cumulative_currency_increase"
+                        app:layout_constraintTop_toTopOf="@id/tv_cumulative_currency_increase" />
+
+                    <TextView
+                        android:id="@+id/tv_today_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="0.0000"
+                        android:textColor="@color/white"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_today_increase"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_increase" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text=" U"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_today_u"
+                        app:layout_constraintStart_toEndOf="@id/tv_today_u" />
+
+                    <TextView
+                        android:id="@+id/tv_today_cny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="≈ 0.00 CNY"
+                        android:textColor="@color/color_d3d"
+                        android:textSize="12dp"
+                        app:layout_constraintStart_toStartOf="@id/tv_today_u"
+                        app:layout_constraintTop_toBottomOf="@id/tv_today_u" />
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="策略启动日期："
+                        android:textColor="@color/color_d5c"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@id/sl_bg_time"
+                        app:layout_constraintStart_toStartOf="@id/tv_cumulative_currency_increase" />
+
+                    <TextView
+                        android:id="@+id/tv_start_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2021-03-21"
+                        android:textColor="@color/color_d5c"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toEndOf="@id/tv_start_time"
+                        app:layout_constraintTop_toTopOf="@id/tv_start_time" />
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="策略运行时长："
+                        android:textColor="@color/color_d5c"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="@id/tv_today_increase"
+                        app:layout_constraintTop_toTopOf="@id/tv_start_time" />
+
+                    <TextView
+                        android:id="@+id/tv_end_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="0天"
+                        android:textColor="@color/color_d5c"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toEndOf="@id/tv_end_time"
+                        app:layout_constraintTop_toTopOf="@id/tv_end_time" />
+
+                    <com.lihang.ShadowLayout
+                        android:id="@+id/sl_bg_time2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/shadow_layout_12dp_width351"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/shadow_layout_12dp_width351"
+                        android:padding="5dp"
+                        app:hl_cornerRadius="6dp"
+                        app:hl_shadowColor="@color/shadow_color"
+                        app:hl_shadowLimit="@dimen/shadow_layout_limit"
+                        app:hl_shadowOffsetY="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sl_bg_time">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="316dp"
+                            android:background="@drawable/shape_white_r5" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view_time"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/shape_cec_left_r6_right_r6"
+                                android:orientation="horizontal"
+                                android:overScrollMode="never"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.viewpager2.widget.ViewPager2
+                                android:id="@+id/view_pager2"
+                                android:layout_width="0dp"
+                                android:layout_height="278dp"
+                                android:background="@drawable/shape_white_r0066"
+                                android:overScrollMode="never"
+                                app:layout_constraintEnd_toEndOf="@id/recycler_view_time"
+                                app:layout_constraintStart_toStartOf="@id/recycler_view_time"
+                                app:layout_constraintTop_toBottomOf="@id/recycler_view_time" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.lihang.ShadowLayout>
+
+
+                    <com.lihang.ShadowLayout
+                        android:id="@+id/sl_bg_time3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="12dp"
+                        android:padding="5dp"
+                        app:hl_cornerRadius="@dimen/shadow_layout_corner_radius"
+                        app:hl_shadowColor="@color/shadow_color"
+                        app:hl_shadowLimit="@dimen/shadow_layout_limit"
+                        app:hl_shadowOffsetY="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sl_bg_time2">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_white_r5"
+                            android:paddingBottom="28dp">
+
+                            <ImageView
+                                android:id="@+id/iv_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="366dp"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/strategy_recycler_view"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:overScrollMode="never"
+                                app:layout_constraintEnd_toEndOf="@id/iv_bg"
+                                app:layout_constraintStart_toStartOf="@id/iv_bg"
+                                app:layout_constraintTop_toBottomOf="@id/iv_bg" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.lihang.ShadowLayout>
+
+                    <TextView
+                        android:id="@+id/tv_current_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="@dimen/drawable_padding_10dp"
+                        android:text="当前持仓"
+                        android:textColor="#ff333333"
+                        android:textSize="20dp"
+                        app:layout_constraintStart_toStartOf="@id/sl_bg_time3"
+                        app:layout_constraintTop_toTopOf="@id/sl_bg_time3" />
+
+                    <TextView
+                        android:id="@+id/tv_current_position_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="2021-02-21 21:22更新"
+                        android:textColor="#ff999999"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_current_position"
+                        app:layout_constraintEnd_toEndOf="@id/sl_bg_time3"
+                        app:layout_constraintTop_toTopOf="@id/tv_current_position" />
+
+                    <ImageView
+                        android:id="@+id/iv_bg_current_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@mipmap/bg_current_position"
+                        app:layout_constraintEnd_toEndOf="@id/sl_bg_time3"
+                        app:layout_constraintStart_toStartOf="@id/sl_bg_time3"
+                        app:layout_constraintTop_toBottomOf="@id/tv_current_position" />
+
+                    <TextView
+                        android:id="@+id/tv_total_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:text="持仓总额："
+                        android:textColor="#ff999999"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_bg_current_position"
+                        app:layout_constraintStart_toStartOf="@id/iv_bg_current_position"
+                        app:layout_constraintTop_toTopOf="@id/iv_bg_current_position" />
+
+                    <TextView
+                        android:id="@+id/tv_total_position_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2122.78≈3233123.89CNY"
+                        android:textColor="@color/color_666"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toEndOf="@id/tv_total_position"
+                        app:layout_constraintTop_toTopOf="@id/tv_total_position" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie_chart"
+                        android:layout_width="181dp"
+                        android:layout_height="181dp"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintEnd_toEndOf="@id/sl_bg_time3"
+                        app:layout_constraintStart_toStartOf="@id/sl_bg_time3"
+                        app:layout_constraintTop_toBottomOf="@id/tv_total_position_value" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</layout>

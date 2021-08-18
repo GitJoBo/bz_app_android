@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_current_server_ip_address"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_title"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="12dp"
+        android:textColor="@color/text_black"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:textSize="14dp"
+        android:textColor="@color/text_245"
+        android:text="复制"
+        app:layout_constraintBottom_toBottomOf="@id/tv_current_server_ip_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_current_server_ip_address" />
+    <View
+        android:id="@+id/view_diver"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/eee"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_server_ip_address"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

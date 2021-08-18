@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="ToolBarStyle_black" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionMenuTextColor">@android:color/black</item> <!-- menu 敲定颜色-->
+        <item name="android:textSize">14dp</item> <!--  搞掂字体大小-->
+        <item name="android:textStyle">normal</item>
+        <item name="colorControlNormal">@color/black</item><!--图标颜色-->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+</resources>

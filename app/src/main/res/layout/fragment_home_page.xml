@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+
+        <include
+            android:id="@+id/include_title"
+            layout="@layout/layout_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.core.widget.NestedScrollView
+                style="@style/nested_scrollview"
+                android:background="@color/white"
+                android:focusableInTouchMode="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="top|left"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_v50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="138dp"
+                        app:banner_indicator_normal_color="#D8D8D8"
+                        app:banner_indicator_normal_width="12dp"
+                        app:banner_indicator_selected_color="@color/white"
+                        app:banner_indicator_selected_width="12dp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_home_announcement"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginStart="12dp"-->
+                    <!--                        android:layout_marginTop="18dp"-->
+                    <!--                        android:background="@drawable/shape_cd5dbe9_r3"-->
+                    <!--                        android:padding="5dp"-->
+                    <!--                        android:text="@string/the_announcement"-->
+                    <!--                        android:textColor="@color/main_theme_color"-->
+                    <!--                        android:textSize="14dp"-->
+                    <!--                        app:layout_constraintStart_toStartOf="@id/banner_home"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@id/banner_home" />-->
+                    <!--                    ic_notice-->
+                    <ImageView
+                        android:id="@+id/iv_home_announcement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@mipmap/ic_notice"
+                        android:padding="5dp"
+                        app:layout_constraintStart_toStartOf="@id/banner_home"
+                        app:layout_constraintTop_toBottomOf="@id/banner_home" />
+
+                    <com.bizeng.lh.widget.view.ScrollTextView
+                        android:id="@+id/stv_home_announcement"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:gravity="start"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_home_announcement"
+                        app:layout_constraintEnd_toStartOf="@id/tv_home_announcement_more"
+                        app:layout_constraintStart_toEndOf="@id/iv_home_announcement"
+                        app:layout_constraintTop_toTopOf="@id/iv_home_announcement" />
+
+                    <ImageView
+                        android:id="@+id/tv_home_announcement_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:background="@mipmap/ic_more"
+                        android:textColor="@color/main_theme_color"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_home_announcement"
+                        app:layout_constraintEnd_toEndOf="@id/banner_home"
+                        app:layout_constraintTop_toTopOf="@id/iv_home_announcement" />
+
+                    <View
+                        android:id="@+id/view_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/color_f5f"
+                        app:layout_constraintTop_toBottomOf="@id/iv_home_announcement" />
+
+                    <TextView
+                        android:id="@+id/tv_home_education_zone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/the_tutorial_section"
+                        android:textColor="@color/text_black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/banner_home"
+                        app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+                    <TextView
+                        android:id="@+id/tv_home_education_zone_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:drawablePadding="5dp"
+                        android:text="@string/more"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        app:drawableRightCompat="@mipmap/ic_right_more"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_home_education_zone"
+                        app:layout_constraintEnd_toEndOf="@id/banner_home"
+                        app:layout_constraintTop_toTopOf="@id/tv_home_education_zone" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_quantitative_introduction"
+                        android:layout_width="0dp"
+                        android:layout_height="113dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:layout_marginEnd="4.5dp"
+                        android:background="@drawable/select_home_quantitative_introduction"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="@id/guideline_v50"
+                        app:layout_constraintStart_toStartOf="@id/banner_home"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_education_zone" />
+
+                    <TextView
+                        android:id="@+id/tv_home_quantitative_introduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/quantitative_introduction"
+                        android:textColor="#ff212121"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@id/iv_home_quantitative_introduction"
+                        app:layout_constraintTop_toTopOf="@id/iv_home_quantitative_introduction" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/click_on_the_understanding"
+                        android:textColor="#ff9ba8b3"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@id/tv_home_quantitative_introduction"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_quantitative_introduction" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="113dp"
+                        android:orientation="vertical"
+                        android:paddingStart="4.5dp"
+                        app:layout_constraintEnd_toEndOf="@id/banner_home"
+                        app:layout_constraintStart_toStartOf="@id/guideline_v50"
+                        app:layout_constraintTop_toTopOf="@id/iv_home_quantitative_introduction">
+
+                        <TextView
+                            android:id="@+id/tv_home_buy_coins_guide"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="9dp"
+                            android:background="@drawable/select_shape_getting_started"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_home_security"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/select_shape_security"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:textColor="#212121"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:background="@color/color_f5f"
+                        app:layout_constraintTop_toBottomOf="@id/iv_home_quantitative_introduction" />
+
+                    <TextView
+                        android:id="@+id/tv_home_strategy_recommendation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="@dimen/drawable_padding_10dp"
+                        android:gravity="center"
+                        android:text="@string/policy_recommendations"
+                        android:textColor="@color/text_black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/banner_home"
+                        app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+                    <TextView
+                        android:id="@+id/tv_home_strategy_recommendation_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:drawablePadding="5dp"
+                        android:text="@string/more"
+                        android:textSize="14dp"
+                        app:drawableRightCompat="@mipmap/ic_right_more"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_home_strategy_recommendation"
+                        app:layout_constraintEnd_toEndOf="@id/banner_home"
+                        app:layout_constraintTop_toTopOf="@id/tv_home_strategy_recommendation" />
+
+                    <View
+                        android:id="@+id/view_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/eee"
+                        android:visibility="invisible"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_strategy_recommendation" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_home_strategy_recommendation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        app:layout_constraintTop_toBottomOf="@id/view_3" />
+
+                    <View
+                        android:id="@+id/view_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/color_f5f"
+                        app:layout_constraintTop_toBottomOf="@id/recycler_view_home_strategy_recommendation" />
+
+                    <TextView
+                        android:id="@+id/tv_home_hot_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/title2_top"
+                        android:drawableLeft="@drawable/shape_width4_c245"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/popular_consultation"
+                        android:textColor="@color/text_black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/banner_home"
+                        app:layout_constraintTop_toBottomOf="@id/view_4" />
+
+                    <TextView
+                        android:id="@+id/tv_home_hot_new_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:drawablePadding="5dp"
+                        android:text="@string/more"
+                        app:drawableRightCompat="@mipmap/ic_right_more"
+                        app:layout_constraintEnd_toEndOf="@id/banner_home"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_home_hot_new"
+                        app:layout_constraintTop_toTopOf="@id/tv_home_hot_new" />
+
+                    <View
+                        android:id="@+id/view_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/eee"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_hot_new" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_home_hot_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintTop_toBottomOf="@id/view_5" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+
+</layout>

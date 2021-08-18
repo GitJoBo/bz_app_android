@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.LoginNewActivity">
+
+    <!--    不好调试-->
+    <!--    <data>-->
+
+    <!--        <variable-->
+    <!--            name="viewModel"-->
+    <!--            type="com.wzq.mvvmsmart.base.BaseViewModelMVVM" />-->
+    <!--    </data>-->
+
+    <androidx.core.widget.NestedScrollView style="@style/nested_scrollview">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="30dp"
+                android:background="@mipmap/ic_login_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="币增AI平台"
+                android:textColor="@color/text_245"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="@id/iv_logo"
+                app:layout_constraintStart_toStartOf="@id/iv_logo"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="39dp"
+                android:text="登录发现更多精彩"
+                android:textColor="@color/text_black"
+                android:textSize="21dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="351dp"
+                android:layout_height="386dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_2" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                android:text="手机号"
+                android:textColor="@color/text_black"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@id/iv_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_bg" />
+
+            <com.bizeng.lh.widget.view.ClearWriteEditText
+                android:id="@+id/et_login_phone"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/selector_login_new_et"
+                android:hint="@string/please_enter_the_phone_number"
+                android:inputType="phone"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="16dp"
+                app:et_right_image="@mipmap/ic_clear"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg"
+                app:layout_constraintStart_toStartOf="@id/iv_bg"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+
+            <TextView
+                android:id="@+id/tv_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="验证码"
+                android:textColor="@color/text_black"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@id/et_login_phone"
+                app:layout_constraintTop_toBottomOf="@id/et_login_phone" />
+
+            <EditText
+                android:id="@+id/et_login_verification_code"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/selector_login_new_et"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxWidth="280dp"
+                android:minWidth="120dp"
+                android:paddingStart="16dp"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@id/et_login_phone"
+                app:layout_constraintStart_toStartOf="@id/et_login_phone"
+                app:layout_constraintTop_toBottomOf="@id/tv_verification_code" />
+
+            <CheckBox
+                android:id="@+id/cb_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_login_check_box"
+                android:paddingTop="18dp"
+                android:paddingEnd="5dp"
+                app:layout_constraintStart_toStartOf="@+id/et_login_verification_code"
+                app:layout_constraintTop_toBottomOf="@+id/et_login_verification_code" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="点击获取验证码后填入888888,测试专用"
+                android:textSize="12dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/et_login_verification_code"
+                app:layout_constraintTop_toBottomOf="@id/et_login_verification_code" />
+
+            <TextView
+                android:id="@+id/tv_agree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="我已阅读并同意"
+                android:textColor="@color/color_999"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/et_login_verification_code"
+                app:layout_constraintStart_toEndOf="@id/cb_"
+                app:layout_constraintTop_toBottomOf="@id/et_login_verification_code" />
+
+            <TextView
+                android:id="@+id/btn_login_send_code"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/login_send_code2"
+                android:textColor="@color/text_245"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_login_verification_code"
+                app:layout_constraintEnd_toEndOf="@+id/et_login_phone"
+                app:layout_constraintTop_toTopOf="@id/et_login_verification_code" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/login_btn_selector"
+                android:clickable="false"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_register_btn_code_text_size"
+                app:layout_constraintTop_toBottomOf="@id/cb_" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="首次登录会自动创建账号"
+                android:textColor="@color/color_999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_245">
+
+        <View
+            android:id="@+id/view_screenshot"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layerType="software"
+            app:layout_constraintTop_toBottomOf="@id/main_bar"
+            app:layout_constraintBottom_toTopOf="@id/ll_bottom"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"/>
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:background="@mipmap/bg_qr_code_recommendation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_title"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolBarStyle_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@mipmap/icon_fh_black_white">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                tools:text="Title" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <TextView
+            android:id="@+id/tv_invitation_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="邀请码:"
+            android:textColor="#ffb9bf24"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@id/iv_qr"
+            app:layout_constraintEnd_toEndOf="@id/iv_qr"
+            app:layout_constraintStart_toStartOf="@id/iv_qr" />
+
+        <ImageView
+            android:id="@+id/iv_qr"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="316dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@mipmap/bg_bottom_invitation"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_copy_invitation_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_copy_invitation_code"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:text="复制邀请码"
+                android:textColor="@color/color_666"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_download_poster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_copy_invitation_code"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:text="下载海报"
+                android:textColor="@color/color_666"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ic_copy_invitation_code"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:text="分享"
+                android:textColor="@color/color_666"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
